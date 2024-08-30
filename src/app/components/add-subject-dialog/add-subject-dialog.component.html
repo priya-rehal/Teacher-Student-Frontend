@@ -1,0 +1,36 @@
+<div class="main">
+    <div class=" header">
+        <h2>Add Subject</h2>
+        <span class="close" (click)="closeModel()"> </span>
+    </div>
+    <div>
+        <form [formGroup]="subjectForm">
+            <div class="formgroup">
+                <label mat-label>Name</label>
+                <input matInput class="form-control" formControlName="name"
+                    [ngClass]="{input_error:subjectForm.controls.name.invalid && subjectForm.controls.name.touched}" />
+            </div>
+            <div class="formgroup">
+                <label>Standard</label>
+                <mat-radio-group aria-label="Select an option" formControlName="standardId">
+                    <ng-container *ngFor="let standard of standards">
+                        <mat-radio-button [value]="standard.id">{{standard.className}}</mat-radio-button>
+                    </ng-container>
+                </mat-radio-group>
+            </div>
+            <div class="formgroup">
+                <label>Languages</label>
+                <div *ngFor="let language of languages" class="checkbox-group">
+                    <mat-checkbox [value]="language.id" (change)="addLanguage(language.id, $event.checked)">
+                        {{language.name}}
+                    </mat-checkbox>
+                </div>
+            </div>
+            <div class="formgroup">
+                <button class="add_more" mat-button (click)="add()">Add</button>
+                <button mat-button (click)="clear()" class="theme_clear_outer theme_modal_btn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+</div>

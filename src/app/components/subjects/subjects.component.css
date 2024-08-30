@@ -1,0 +1,29 @@
+.main{
+    margin: 20px;
+}
+.main button{
+    position: relative;
+    margin-bottom: 20px;
+    background-color: cadetblue;
+    color: white;
+    border: 0;
+}
+.main table th{
+    box-shadow: 2px 2px 4px lightblue;
+    background-color:rgba(211, 211, 211, 0.377);
+    text-align: center;
+    color: black;
+    text-transform: capitalize;
+}
+.main table td{
+    background-color:white;
+    color: black;
+    text-transform: lowercase;
+    box-shadow: 2px 2px lightgray;
+    text-align: center;
+}
+.main table td:hover{
+    cursor: pointer;
+    background-color: white;
+    color: cadetblue;
+}

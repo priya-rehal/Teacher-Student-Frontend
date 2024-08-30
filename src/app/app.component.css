@@ -1,0 +1,18 @@
+.main{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: rgb(58, 48, 35);
+}
+.main a{
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+.main a:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 2px lightgray;
+}

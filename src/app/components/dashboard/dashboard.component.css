@@ -1,0 +1,9 @@
+.classList{
+    list-style: none;
+    display: flex;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

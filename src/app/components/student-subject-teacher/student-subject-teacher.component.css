@@ -1,0 +1,72 @@
+ul{
+    list-style: none;
+}
+.main
+{
+    display: flex;
+    flex-direction: row;
+}
+.classes{
+    margin: 10px;
+    padding: 10px;
+}
+.classes button{
+    border-radius: 100%;
+    border: 0;
+    font-size: 4em;
+    background-color: cadetblue;
+    color: white;
+    font-family: cursive;
+}
+.classes button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px lightblue;
+}
+.student{
+    margin: 10px;
+    padding: 10px;
+}
+.student ul li{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-transform: capitalize;
+}
+.student ul li button{
+    border: 0;
+    background-color: cadetblue;
+    border-radius: 5px;
+    color: white;
+    font-family: cursive;
+}
+.student ul li button:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px lightblue;
+}
+.subject{
+    margin: 10px;
+    padding: 10px;
+}
+.subject ul{
+    display: flex;
+}
+.subject ul li{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+#sub{
+    padding: 4px;
+    margin-right: 5px;
+    text-align: center;
+    background-color:rgb(66, 49, 27);
+    color:white;
+   
+}
+#teacher{
+    text-align: center;
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="classes">
+        <h2>Select on any class</h2>
+        <ul *ngFor="let class of standards" class="classList">
+            <li>
+                <button (click)="getStudents(class.id,class.className)">{{class.className}}</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="student">
+        <h2>Students of {{selectedClass}} class</h2>
+        <ul *ngFor="let student of students">
+            <li>{{student.name}} </li>
+        </ul>
+        <button (click)="getSubjectTeacher(selectedClass)">Click To see subject and
+            teacher</button>
+    </div>
+
+    <div class="subject">
+        <h2>Teachers and subjects</h2>
+        <ul *ngFor="let student of studentSubject">
+            <li id="sub">{{student.subject.name}} &nbsp;</li>
+            <li id="teacher">{{student.teacher.name}} &nbsp;</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="header">
+        <h2>Add Student</h2>
+        <span class="close" (click)="closeModel()"> </span>
+    </div>
+    <div>
+        <form [formGroup]="studentForm">
+            <div class="formgroup">
+                <label mat-label>Name</label>
+                <input matInput formControlName="name"
+                    [ngClass]="{input_error:studentForm.controls.name.invalid && studentForm.controls.name.touched}" />
+            </div>
+            <div class="formgroup">
+                <label mat-label>Age</label>
+                <input matInput type="text" formControlName="age"
+                    [ngClass]="{input_error:studentForm.controls.age.invalid && studentForm.controls.age.touched}" />
+            </div>
+            <div class="formgroup">
+                <label mat-label>Image</label>
+                <input type="file" formControlName="image"
+                    [ngClass]="{input_error:studentForm.controls.image.invalid && studentForm.controls.image.touched}" />
+            </div>
+            <div class="formgroup">
+                <label>Standard</label>
+                <mat-radio-group formControlName="standard">
+                    <ng-container *ngFor="let standard of standards">
+                        <mat-radio-button [value]="standard.id">{{standard.className}}</mat-radio-button>
+                    </ng-container>
+                </mat-radio-group>
+            </div>
+            <div class="formgroup">
+                <label mat-label>RollNumber</label>
+                <input matInput type="text" formControlName="rollNumber"
+                    [ngClass]="{input_error:studentForm.controls.rollNumber.invalid && studentForm.controls.rollNumber.touched}" />
+            </div>
+            <div class="formgroup">
+                <button (click)="addStudent()">Add</button>
+                <button (click)="clear()">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>

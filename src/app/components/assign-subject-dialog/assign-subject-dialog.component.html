@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="header">
+        <h2>Assign Subject</h2>
+        <span class="close" (click)="closeModel()"> </span>
+    </div>
+    <div>
+        <form [formGroup]="teacherForm">
+            <div class="formgroup">
+                <label mat-label>Teacher</label>
+                <input readonly matInput class="form-control" formControlName="teacher"
+                    [ngClass]="{input_error:teacherForm.controls.teacher.invalid && teacherForm.controls.teacher.touched}" />
+            </div>
+            <div class="formgroup">
+                <label mat-label>Teacher</label>
+                <select formControlName="subjectId" *ngIf="subjects"
+                    [ngClass]="{input_error:teacherForm.controls.subjectId.invalid && teacherForm.controls.subjectId.touched}">
+                    <option [ngValue]="null" disabled>Select Subject</option>
+                    <option *ngFor="let subject of subjects" [ngValue]="subject.id">{{subject.name}}</option>
+                </select>
+            </div>
+            <div class="formgroup">
+                <button mat-button (click)="addteacher()">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
